@@ -25,11 +25,12 @@ function JsonToExcelConverter() {
   const convertJsonToExcel = (jsonData) => {
     try {
       // Flatten the JSON data for Excel
-      const flatData = jsonData.map((item) => ({
+      const flatData = jsonData.map((item, index) => ({
         tokenID: item.edition,
-        file_name: item.name,
+        name: item.name,
         description: item.description,
-        external_url: item.image,
+        file_name: `${index + 1}.png`,
+        external_url: "https://example.com",
         ...item.attributes.reduce(
           (acc, attr) => ({
             ...acc,
