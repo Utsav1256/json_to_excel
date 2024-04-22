@@ -55,11 +55,15 @@ function JsonToExcelConverter() {
     };
 
     return (
-        <div>
-            <input type="file" accept=".json" onChange={handleFileChange} />
-            <br />
-            {downloadUrl && <a href={downloadUrl} download="data.xlsx">Download Excel file</a>}
-        </div>
+        <div className='w-full h-full bg-slate-700 flex flex-col items-center justify-center text-xl '>
+            <h2 className='text-white text-3xl font-bold mb-6'>convert .json to .xlsx(excel)</h2>
+<div className='w-[500px] h-[200px] bg-orange-400 rounded-lg overflow-hidden flex items-center justify-center pl-24 '>
+<input  type="file" className='' accept=".json" onChange={handleFileChange} />
+    
+    </div>            <br />
+<div className='w-[500px] h-[100px] bg-slate-500 rounded-lg flex items-center justify-center text-lime-300 font-bold'>
+{downloadUrl && <a href={downloadUrl} download="data.xlsx">Download Excel file</a>}
+    </div>        </div>
     );
 }
 

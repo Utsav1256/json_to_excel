@@ -1,12 +1,9 @@
-import './App.css';
 import JsonToExcelConverter from './components/JsonToExcelConverter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App w-screen h-screen ">
        <JsonToExcelConverter/>
-      </header>
     </div>
   );
 }
