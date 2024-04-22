@@ -29,7 +29,7 @@ function JsonToExcelConverter() {
         tokenID: item.edition,
         name: item.name,
         description: item.description,
-        file_name: `${index + 1}.png`,
+        file_name: item.image.split("/").pop(),
         external_url: "https://example.com",
         ...item.attributes.reduce(
           (acc, attr) => ({
